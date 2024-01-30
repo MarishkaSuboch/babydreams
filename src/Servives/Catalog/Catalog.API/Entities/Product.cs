@@ -1,0 +1,22 @@
+﻿using MongoDB.Bson;
+using MongoDB.Bson.Serialization.Attributes;
+using MongoDB.Bson.Serialization.IdGenerators;
+
+namespace Catalog.API.Entities
+{
+    public class Product
+    {
+        [BsonId]
+        [BsonRepresentation(BsonType.ObjectId)]
+        public string Id { get; set; }
+
+        [BsonElement("Name")]
+        public string Name { get; set; } 
+        public string Description { get; set; }
+        public int Category_ID { get; set; }
+        public int Consultant_ID { get; set; }
+        public int Price { get; set; }
+        public string Currency { get; set; }
+
+    }
+}
