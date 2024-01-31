@@ -11,5 +11,6 @@ namespace Catalog.API.Entities
         public string Email { get; set; }
         public string ModilePhone { get; set; }
         public SocialType SocialType { get; set; }
+        public string Social { get; set; }
     }
 }
