@@ -27,7 +27,7 @@ namespace Catalog.API.Entities.Repositories
 
         public async Task<IEnumerable<Product>> GetProductByConsultantAsync(string consultant)
         {
-            FilterDefinition<Product> filter = Builders<Product>.Filter.Eq(p => p.Category.Name, consultant);
+            FilterDefinition<Product> filter = Builders<Product>.Filter.Eq(p => p.Consultant.Name, consultant);
             return await catalogContext.Products.Find(filter).ToListAsync();
         }
 
