@@ -11,12 +11,12 @@ namespace Catalog.API.Entities
         public string Id { get; set; }
 
         [BsonElement("Name")]
-        public string Name { get; set; } 
+        public required string Name { get; set; } 
         public string Description { get; set; }
-        public int Category_ID { get; set; }
-        public int Consultant_ID { get; set; }
-        public int Price { get; set; }
-        public string Currency { get; set; }
+        public required Category Category { get; set; }
+        public required Consultant Consultant { get; set; }
+        public required int Price { get; set; }
+        public required string Currency { get; set; }
 
     }
 }
