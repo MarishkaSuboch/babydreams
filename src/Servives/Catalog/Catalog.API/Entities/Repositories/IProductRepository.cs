@@ -4,7 +4,6 @@
     {
         Task<IEnumerable<Product>> GetProductsAsync();
         Task<Product> GetProductByIdAsync(string id);
-        Task<IEnumerable<Product>> GetProductsByNameAsync(string name);
         Task<IEnumerable<Product>> GetProductByCategoryAsync(string category);
         Task<IEnumerable<Product>> GetProductByConsultantAsync(string consultant);
 

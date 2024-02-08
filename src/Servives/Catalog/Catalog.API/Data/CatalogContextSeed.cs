@@ -17,17 +17,41 @@ namespace Catalog.API.Data
 
         private static IEnumerable<Product> GetConfiguredProducts()
         {
-            List<SocialType> socialTypes =
+            List<Category> categories =
             [
-                new SocialType()
+                new Category()
                 {
                     Id = 1,
-                    Name = "telegram"
+                    Name = "Son"
                 },
-                new SocialType()
+                new Category()
+                {
+                    Id = 1,
+                    Name = "Food"
+                },
+                new Category()
+                {
+                    Id = 1,
+                    Name = "GV"
+                }
+            ];
+
+            List<SubCategory> subCategories =
+            [
+                new SubCategory()
+                {
+                    Id = 1,
+                    Name = "Consultation"
+                },
+                new SubCategory()
                 {
                     Id = 2,
-                    Name = "instagram"
+                    Name = "SupportLite"
+                },
+                new SubCategory()
+                {
+                    Id = 3,
+                    Name = "SupportVip"
                 }
             ];
 
@@ -36,74 +60,93 @@ namespace Catalog.API.Data
                 new Consultant()
                 {
                     Id = 1,
-                    Name = "Maryna",
-                    Surname = "Subach",
-                    Email = "marsub@gmail.com",
-                    ModilePhone = "12345678",
-                    SocialType = socialTypes[0],
-                    Social = "mrg"
+                    FullName = "Anna Ivanova",
+                    Email = "example@gmail.com",
+                    PhoneNumber = "12345678",
+                    Social = "mrg",
+                    Description = "Good specialist",
+                    WorkTineFrom = new TimeOnly(8, 0),
+                    WorkTineTo = new TimeOnly(18, 0),
+                    TimeZone = TimeZoneInfo.Local
+                },
+                new Consultant()
+                {
+                    Id = 2,
+                    FullName = "Ola Petrova",
+                    Email = "example@gmail.com",
+                    PhoneNumber = "12345678",
+                    Social = "mrg",
+                    Description = "Good specialist",
+                    WorkTineFrom = new TimeOnly(8, 0),
+                    WorkTineTo = new TimeOnly(18, 0),
+                    TimeZone = TimeZoneInfo.Local
+                },
+                new Consultant()
+                {
+                    Id = 3,
+                    FullName = "Helen Sidorova",
+                    Email = "example@gmail.com",
+                    PhoneNumber = "12345678",
+                    Social = "mrg",
+                    Description = "Good specialist",
+                    WorkTineFrom = new TimeOnly(8, 0),
+                    WorkTineTo = new TimeOnly(18, 0),
+                    TimeZone = TimeZoneInfo.Local
                 }
             ];
 
-            List<Category> categories =
-            [
-                new Category()
-                {
-                    Id = 1,
-                    Name = "Son"
-                }
-            ];
+
             return new List<Product>()
             {
                 new Product()
                 {
                     Id = "602d2149e773f2a3990b47f5",
-                    Consultant = consultants[0],
                     Category = categories[0],
-                    Currency = "usd",
-                    Description = "First Product Description",
-                    Name = "First Product",
-                    Price = 50
+                    SubCategory = subCategories[0],
+                    Consultant = consultants[0],
+                    Date = new DateTime(new DateOnly(2024, 2,1 ), new TimeOnly(10, 0)),
+                    Price = 50,
+                    Currency = "usd"
                 },
                 new Product()
                 {
                     Id = "602d2149e773f2a3990b47f4",
-                    Consultant = consultants[0],
-                    Category = categories[0],
-                    Currency = "usd",
-                    Description = "Second Product Description",
-                    Name = "Second Product",
-                    Price = 50
+                    Category = categories[1],
+                    SubCategory = subCategories[0],
+                    Consultant = consultants[2],
+                    Date = new DateTime(new DateOnly(2024, 2,13 ), new TimeOnly(10, 0)),
+                    Price = 50,
+                    Currency = "usd"
                 },
                 new Product()
                 {
                     Id = "602d2149e773f2a3990b47f3",
-                    Consultant = consultants[0],
                     Category = categories[0],
-                    Currency = "usd",
-                    Description = "Third Product Description",
-                    Name = "Third Product",
-                    Price = 50
+                    SubCategory = subCategories[2],
+                    Consultant = consultants[2],
+                    Date = new DateTime(new DateOnly(2024, 2,10 ), new TimeOnly(10, 0)),
+                    Price = 50,
+                    Currency = "usd"
                 },
                 new Product()
                 {
                     Id = "602d2149e773f2a3990b47f2",
-                    Consultant = consultants[0],
-                    Category = categories[0],
-                    Currency = "usd",
-                    Description = "Fourth Product Description",
-                    Name = "Fourth Product",
-                    Price = 50
+                    Category = categories[1],
+                    SubCategory = subCategories[1],
+                    Consultant = consultants[1],
+                    Date = new DateTime(new DateOnly(2024, 2,12 ), new TimeOnly(10, 0)),
+                    Price = 50,
+                    Currency = "usd"
                 },
                 new Product()
                 {
                     Id = "602d2149e773f2a3990b47f1",
+                    Category = categories[2],
+                    SubCategory = subCategories[0],
                     Consultant = consultants[0],
-                    Category = categories[0],
-                    Currency = "usd",
-                    Description = "Fifth Product Description",
-                    Name = "Fifth Product",
-                    Price = 50
+                    Date = new DateTime(new DateOnly(2024, 2,1 ), new TimeOnly(10, 0)),
+                    Price = 50,
+                    Currency = "usd"
                 }
             };
         }
