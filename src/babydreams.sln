@@ -15,7 +15,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Basket.API", "Servives\Bask
 EndProject
 Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{4E1ABFC1-1B8E-4BEE-8A7F-31580A93CD1E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Catalog.Api.Tests", "Servives\Catalog\Catalog.Api.Tests\Catalog.Api.Tests.csproj", "{53FB81C5-A87D-46DA-84CD-885D64D77A15}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Catalog.Api.Tests", "Servives\Catalog\Catalog.Api.Tests\Catalog.Api.Tests.csproj", "{53FB81C5-A87D-46DA-84CD-885D64D77A15}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
