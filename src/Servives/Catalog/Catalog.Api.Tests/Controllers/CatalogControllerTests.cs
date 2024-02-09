@@ -1,4 +1,16 @@
-﻿using Catalog.API.Entities.Repositories;
+﻿using NUnit.Framework;
+using Catalog.API.Controllers;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using RestSharp;
+using System.Net;
+using System.Threading;
+using Amazon.Runtime.Internal.Util;
+using Catalog.API.Data;
+using Catalog.API.Entities.Repositories;
 using Catalog.API.Entities;
 using Moq;
 using Microsoft.AspNetCore.Mvc;
