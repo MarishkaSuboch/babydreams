@@ -2,7 +2,6 @@
 using Catalog.API.Entities.Repositories;
 using Microsoft.AspNetCore.Mvc;
 using System.Net;
-using System.Reflection.Metadata;
 
 namespace Catalog.API.Controllers
 {
@@ -48,9 +47,9 @@ namespace Catalog.API.Controllers
         [HttpGet]
         [Route("[action]/{Consultant}", Name = "GetProductByConsultant")]
         [ProducesResponseType(typeof(IEnumerable<Product>), (int)HttpStatusCode.OK)]
-        public async Task<ActionResult<IEnumerable<Product>>> GetProductsByConsultant(string consultant)
+        public async Task<ActionResult<IEnumerable<Product>>> GetProductsByConsultant(int consultantId)
         {
-            var products = await _productRepository.GetProductByConsultantAsync(consultant);
+            var products = await _productRepository.GetProductByConsultantAsync(consultantId);
 
             return Ok(products);
         }

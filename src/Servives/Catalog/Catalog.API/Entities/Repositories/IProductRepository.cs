@@ -5,7 +5,7 @@
         Task<IEnumerable<Product>> GetProductsAsync();
         Task<Product> GetProductByIdAsync(string id);
         Task<IEnumerable<Product>> GetProductByCategoryAsync(string category);
-        Task<IEnumerable<Product>> GetProductByConsultantAsync(string consultant);
+        Task<IEnumerable<Product>> GetProductByConsultantAsync(int consultantId);
 
         Task CreateProductAsync(Product product);
         Task<bool> UpdateProductAsync(Product product);

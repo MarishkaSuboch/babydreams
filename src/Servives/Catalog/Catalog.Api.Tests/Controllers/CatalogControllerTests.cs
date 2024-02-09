@@ -129,7 +129,8 @@ namespace Catalog.API.Controllers.Tests
                 new Consultant()
                 {
                     Id = 1,
-                    FullName = "Anna Ivanova",
+                    Name = "Anna",
+                    Surname = "Ivanova",
                     Email = "example@gmail.com",
                     PhoneNumber = "12345678",
                     Social = "mrg",
@@ -141,7 +142,8 @@ namespace Catalog.API.Controllers.Tests
                 new Consultant()
                 {
                     Id = 2,
-                    FullName = "Ola Petrova",
+                    Name = "Ola",
+                    Surname = "Petrova",
                     Email = "example@gmail.com",
                     PhoneNumber = "12345678",
                     Social = "mrg",
@@ -153,7 +155,8 @@ namespace Catalog.API.Controllers.Tests
                 new Consultant()
                 {
                     Id = 3,
-                    FullName = "Helen Sidorova",
+                    Name = "Helen",
+                    Surname = "Sidorova",
                     Email = "example@gmail.com",
                     PhoneNumber = "12345678",
                     Social = "mrg",
