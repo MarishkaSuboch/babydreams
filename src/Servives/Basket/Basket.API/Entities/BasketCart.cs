@@ -1,11 +1,16 @@
 ﻿namespace Basket.API.Entities
 {
-    public class Basket(string userName)
+    public class BasketCart
     {
-        public string UserName { get; set; } = userName;
+        public BasketCart(string userName)
+        {
+            UserName = userName;
+        }
+        public string UserName { get; set; }
         public List<BasketIem> Items { get; set; }
         public string State { get; set; }
 
+        //TODO if there are no Items
         public decimal TotalPrice
         {
             get

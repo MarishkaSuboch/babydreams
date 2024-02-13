@@ -2,8 +2,8 @@
 {
     public interface IBasketRepository
     {
-        Task<Basket> GetBasketsAsync(string userName);
-        Task<Basket> UpdateBasketAsync(Basket basket);
+        Task<BasketCart> GetBasketsAsync(string userName);
+        Task<BasketCart> UpdateBasketAsync(BasketCart basket);
         Task DeleteBasketAsync(string userName);
     }
 }

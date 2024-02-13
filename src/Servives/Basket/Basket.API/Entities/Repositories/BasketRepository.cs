@@ -8,13 +8,13 @@ namespace Basket.API.Entities.Repositories
     {
         private readonly IDistributedCache _redisCache = redisCache ?? throw new ArgumentNullException(nameof(redisCache));
 
-        public async Task<Basket> GetBasketsAsync(string userName)
+        public async Task<BasketCart> GetBasketsAsync(string userName)
         {
             var basket = await _redisCache.GetStringAsync(userName);
-            return string.IsNullOrEmpty(basket) ? null : JsonConvert.DeserializeObject<Basket>(basket);
+            return string.IsNullOrEmpty(basket) ? null : JsonConvert.DeserializeObject<BasketCart>(basket);
         }
 
-        public async Task<Basket> UpdateBasketAsync(Basket basket)
+        public async Task<BasketCart> UpdateBasketAsync(BasketCart basket)
         {
             await _redisCache.SetStringAsync(basket.UserName, JsonConvert.SerializeObject(basket));
             return await GetBasketsAsync(basket.UserName);
